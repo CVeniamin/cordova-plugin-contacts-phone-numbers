@@ -37,7 +37,12 @@
                 <param name="ios-package" value="CDVContactsPhoneNumbers"/>
             </feature>
         </config-file>
-
+        
+        <preference name="CONTACTS_USAGE_DESCRIPTION" default="Allow the app to access contact information" />
+        <config-file target="*-Info.plist" parent="NSContactsUsageDescription">
+            <string>$CONTACTS_USAGE_DESCRIPTION</string>
+        </config-file>
+        
         <header-file src="src/ios/CDVContactsPhoneNumbers.h" />
         <source-file src="src/ios/CDVContactsPhoneNumbers.m" />
 
